@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import codecs
 import os
 try:
     from setuptools import setup
@@ -10,7 +11,7 @@ except ImportError:
 long_description = """This library provides easy access to Digital Ocean APIs to deploy droplets, images and more."""
 
 if os.path.isfile("DESCRIPTION.rst"):
-    with open('DESCRIPTION.rst') as file:
+    with codecs.open('DESCRIPTION.rst', 'r', 'utf-8') as file:
         long_description = file.read()
 
 setup(
